@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 public class CoursService {
 	
 	@Autowired
-	private CoursRepository categorieRepository;
+	private CoursRepository coursRepository;
 	
 	public Cours addCategorie(Cours courss) {
-		return categorieRepository.save(courss);
+		return coursRepository.save(courss);
 	}
-	 public List<Cours> getAllCategories()  {
+	 public List<Cours> getAllCours()  {
 
-	        List<Cours> courss = categorieRepository.findAll();
+	        List<Cours> courss = coursRepository.findAll();
 	        return courss.stream().collect(Collectors.toList());
 	    }
 }
