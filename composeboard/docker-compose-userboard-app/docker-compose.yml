@@ -12,7 +12,7 @@ services:
       - spring.cloud.config.uri=http://config:8888
     ports:
       - "3000:8100"
-    image: "docker-service-user"
+    image: "user"
   certification_instance_A:
     build:  ../../Certification
     environment: 
